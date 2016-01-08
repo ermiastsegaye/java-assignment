@@ -1,1 +1,55 @@
+import java.util.Scanner;
+
+
+    
+    
+	import java.util.Scanner;
+
+
+public class customer {
+    
+    
+    int acc_no;
+    String name;
+    double deposit;
+    double withdraw;
+    double balance;
+    
+       
+    double  deposit(){
+        double t;
+        Scanner input=new Scanner(System.in);
+      System.out.println(" how many birr do you want to depose");
+      t=input.nextDouble();
+      balance+=t;
+      return balance;
+    }
+   double withdraw(){ 
+       double p;
+        Scanner input=new Scanner(System.in);
+        System.out.println("how many birr do you want to withdraw");
+        p=input.nextDouble();
+        if(p<=balance){
+        balance-=p;
+    } 
+    else {
+        
+        System.out.println("sorry your balance is not enough");
+        }
+        return balance;
+        }
+       public static void main(String[] args)
+       {
+            String name;
+            int acc_no;
+            customer birhane=new customer();
+            Scanner br=new Scanner(System.in);
+            System.out.print(" please enter your name");
+            name=br.nextLine();
+            System.out.println("please enter your acc_no");
+            acc_no=br.nextInt();
+            
+            birhane.deposit();
+            birhane.withdraw(); 
+}}
 
